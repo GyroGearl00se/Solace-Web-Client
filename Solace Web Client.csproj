@@ -12,6 +12,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SolaceSystems.Solclient.Messaging" Version="10.24.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="trustedca\" />
   </ItemGroup>
 
 </Project>
