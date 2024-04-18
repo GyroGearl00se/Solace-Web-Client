@@ -3,6 +3,7 @@
 ## Description
 The Solace Web Client is using the .NET (C#) library and offers Queue browsing - (Publish/Subscribe to be implemented soon).
 
+![](docs/Solace_Web_Client-Queue_Browser_01.png)
 
 ## Secure Connection (TLS)
 To perform secure connections (tcps://) mount the certificate(s) from your desired endpoint(s) in the "/app/trustedca" directory.
