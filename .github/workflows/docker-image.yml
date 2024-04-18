@@ -1,12 +1,10 @@
 name: Docker Image
 
 on:
-  push:
-    branches: [ "master" ]
+  release:
+    types: published
     tags:
       - v*
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   build:
@@ -21,7 +19,6 @@ jobs:
         images: gyrogearl00se/solace-web-client
         tags: |
           type=raw,value=latest,enable=${{ endsWith(GitHub.ref, 'master') }}
-          type=raw,value=testing,enable=${{ contains(GitHub.head_ref, 'feature') }}
           type=ref,event=tag
           
     - name: Login to DockerHub
