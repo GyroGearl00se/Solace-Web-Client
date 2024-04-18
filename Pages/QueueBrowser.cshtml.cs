@@ -119,7 +119,7 @@ namespace Solace_Web_Client.Pages
                                     UserProperties = keyValuePairs,
                                     DeliveryMode = message.DeliveryMode.ToString()
                                 });
-                                _logger.LogInformation("message.Dump: {$1}", message.Dump());
+                                //_logger.LogInformation("message.Dump: {$1}", message.Dump());
                                 messageCount++;
                             }
                         } while (message != null);
