@@ -5,6 +5,32 @@
 }
 
 <div class="text-center">
-    <h1>Welcome</h1>
+    <h1 id="solace-web-client">Solace Web Client</h1>
+
+    <p>The Solace Web Client is using the .NET (C#) library and offers Queue browsing - (Publish/Subscribe to be implemented soon).</p>
+    <br />
+    <h2 style="text-align:center">Secure Connection (TLS)</h2>
+    <p>To perform secure connections (tcps://) mount the certificate(s) from your desired endpoint(s) in the "/app/trustedca" directory.</p>
+    <br />
+    <h2 id="environment-variables">Environment Variables</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Variable</th>
+                <th>Value</th>
+                <th>Function</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SWC_SKIP_SSL_VERIFY</td>
+                <td>true / false</td>
+                <td>skip ssl verification for tcps connections (default: false)</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <p>For futher Information please visit the Project page on Gtithub</p>
+    <br />
     <p>Project information: <a href="https://github.com/GyroGearl00se/Solace-Web-Client">GitHub.com - GyroGearl00se - Solace-Web-Client</a>.</p>
 </div>
