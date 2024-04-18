@@ -13,13 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-
-    - name: Docker Metadata action
-      uses: docker/metadata-action@v5.5.1
+    
+    - name: Docker meta
+      id: meta
+      uses: crazy-max/ghaction-docker-meta@v2
       with:
         images: gyrogearl00se/solace-web-client
         tags: |
           type=raw,value=latest,enable=${{ endsWith(GitHub.ref, 'master') }}
+          type=raw,value=testing,enable=${{ contains(GitHub.head_ref, 'feature') }}
           type=ref,event=tag
           
     - name: Login to DockerHub
