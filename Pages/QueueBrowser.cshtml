@@ -31,23 +31,23 @@
         <form method="post">
             <div class="input-container">
                 <label for="host">Host (use tcps:// for TLS connection):</label>
-                <input type="text" id="host" name="host" value="@TempData["Host"]"/>
+                <input type="text" id="host" name="host" value="@TempData["Host"]" required />
             </div>
             <div class="input-container">
                 <label for="vpn">VPN:</label>
-                <input type="text" id="vpn" name="vpn" value="@TempData["VPN"]"/>
+                <input type="text" id="vpn" name="vpn" value="@TempData["VPN"]" required />
             </div>
             <div class="input-container">
                 <label for="queue">Queue:</label>
-                <input type="text" id="queue" name="queue" value="@TempData["Queue"]"/>
+                <input type="text" id="queue" name="queue" value="@TempData["Queue"]" required />
             </div>
             <div class="input-container">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" value="@TempData["Username"]"/>
+                <input type="text" id="username" name="username" value="@TempData["Username"]" required />
             </div>
             <div class="input-container">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" value="@TempData["Password"]"/>
+                <input type="password" id="password" name="password" value="@TempData["Password"]" required />
             </div>
             <div id="overlay"
                     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999; display: none;">
