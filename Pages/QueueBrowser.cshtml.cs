@@ -23,7 +23,7 @@ namespace Solace_Web_Client.Pages
             ContextFactory.Instance.Init(_contextFactoryProperties);
 
             _sessionProperties = new SessionProperties();
-            _sessionProperties.SSLValidateCertificate = true;
+            _sessionProperties.SSLValidateCertificate = ENV_SWC_SKIP_SSL_VERIFY;
             _sessionProperties.SSLExcludedProtocols = "TLSv1,TLSv1.1,SSLv3";
             _sessionProperties.SSLTrustStoreDir = "trustedca";
         }
@@ -51,12 +51,13 @@ namespace Solace_Web_Client.Pages
         public OutputModel Output { get; set; }
 
         public ReturnCode returnCode { get; set; }
+        public bool ENV_SWC_SKIP_SSL_VERIFY = (Environment.GetEnvironmentVariable("SWC_SKIP_SSL_VERIFY") == "true") ? true : false;
 
         public void OnPost()
         {
+
             try
             {
-                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
                 _sessionProperties.Host = Request.Form["host"];
                 _sessionProperties.VPNName = Request.Form["vpn"];
                 _sessionProperties.UserName = Request.Form["username"];
