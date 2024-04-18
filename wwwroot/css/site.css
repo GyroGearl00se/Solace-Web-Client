@@ -134,3 +134,7 @@ tbody tr:nth-child(even) {
     cursor: pointer;
     color: #00C895;
 }
+
+.alert-danger p {
+    color: #000;
+}
