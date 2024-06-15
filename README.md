@@ -1,5 +1,10 @@
 # Solace Web Client
 
+<h1 style="color:red">ARCHIVED</h1>
+<h3 style="color:red">Due to change of the used Framework (Razor -> Blazor) and complete rewrite of code, I've decided to start over with a new repo. </h3>
+
+[GitHub - SolaceWebClient](https://github.com/GyroGearl00se/SolaceWebClient)
+
 ## Description
 The Solace Web Client is using the .NET (C#) library and offers Queue browsing - (Publish/Subscribe to be implemented soon).
 
